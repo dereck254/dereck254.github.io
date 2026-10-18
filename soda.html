@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 
@@ -5,13 +6,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Support Dereck Rawlings Ongaro's AI data annotation, AI evaluation, research, writing, and software projects.">
-  <meta name="theme-color" content="#090909"><link rel="icon" href="/favicon.png" type="image/png">
-<link rel="shortcut icon" href="/favicon.png" type="image/png"><title>Buy Me a Soda | Dereck Ongaro</title>
+  <meta name="theme-color" content="#090909">
+  <link rel="icon" href="/favicon.png" type="image/png">
+  <link rel="shortcut icon" href="/favicon.png" type="image/png">
+  <title>Buy Me a Soda | Dereck Ongaro</title>
 
   <link rel="stylesheet" href="assets/style.css">
   <script defer src="assets/script.js"></script>
 </head>
-
 
 <body class="soda-page">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -38,152 +40,173 @@
   </header>
 
   <main id="main">
-    <section class="section wrap">
-      <div class="soda-intro">
-        <p class="eyebrow">A LITTLE SUPPORT GOES A LONG WAY</p>
 
-        <h1>Buy Me a <span class="gold">Soda.</span></h1>
+    <!-- STEP 1: CHOOSE AN AMOUNT -->
+    <div id="selection-view">
 
-        <p class="lead">
-          If my work, projects, or resources have been helpful to you,
-          you can support me with a contribution. Your generosity helps
-          encourage continued learning, creativity, and professional growth.
-        </p>
+      <section class="section wrap" id="amounts-section">
+        <div class="soda-intro">
+          <p class="eyebrow">A LITTLE SUPPORT GOES A LONG WAY</p>
 
-        <p>Choose an amount in US dollars below.</p>
-      </div>
+          <h1>Buy Me a <span class="gold">Soda.</span></h1>
 
-      <div class="soda-grid">
-        <article class="soda-card">
-          <p class="eyebrow">A SMALL GESTURE</p>
-          <h3>Buy a Soda</h3>
-          <div class="soda-amount">$5 USD</div>
-          <p>A small contribution to show your appreciation.</p>
+          <p class="lead">
+            If my work, projects, or resources have been helpful to you,
+            you can support me with a contribution. Your generosity helps
+            encourage continued learning, creativity, and professional growth.
+          </p>
+
+          <p>Choose an amount in US dollars below.</p>
+        </div>
+
+        <div class="soda-grid">
+
+          <article class="soda-card">
+            <p class="eyebrow">A SMALL GESTURE</p>
+            <h3>Buy a Soda</h3>
+            <div class="soda-amount">$5 USD</div>
+            <p>A small contribution to show your appreciation.</p>
+            <button class="soda-button" type="button"
+              onclick="selectAmount(5)">Choose $5</button>
+          </article>
+
+          <article class="soda-card">
+            <p class="eyebrow">SHOW SUPPORT</p>
+            <h3>Encourage My Work</h3>
+            <div class="soda-amount">$20 USD</div>
+            <p>Help support my learning and ongoing projects.</p>
+            <button class="soda-button" type="button"
+              onclick="selectAmount(20)">Choose $20</button>
+          </article>
+
+          <article class="soda-card">
+            <p class="eyebrow">GENEROUS SUPPORT</p>
+            <h3>Fuel the Journey</h3>
+            <div class="soda-amount">$50 USD</div>
+            <p>Contribute towards building skills and useful projects.</p>
+            <button class="soda-button" type="button"
+              onclick="selectAmount(50)">Choose $50</button>
+          </article>
+
+          <article class="soda-card">
+            <p class="eyebrow">EXTRAORDINARY SUPPORT</p>
+            <h3>Invest in Progress</h3>
+            <div class="soda-amount">$100 USD</div>
+            <p>A generous contribution that is deeply appreciated.</p>
+            <button class="soda-button" type="button"
+              onclick="selectAmount(100)">Choose $100</button>
+          </article>
+
+        </div>
+      </section>
+
+      <section class="section wrap" id="custom-section">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">YOUR CONTRIBUTION</p>
+            <h2>Choose your <span class="gold">amount.</span></h2>
+          </div>
+        </div>
+
+        <div class="soda-custom">
+          <label for="custom-amount">Custom amount in USD ($)</label>
+
+          <input id="custom-amount"
+            type="number"
+            min="1"
+            step="0.01"
+            placeholder="Enter an amount in USD">
+
           <button class="soda-button" type="button"
-            onclick="selectAmount(5)">Choose $5</button>
-        </article>
+            onclick="useCustomAmount()">Continue with Custom Amount</button>
 
-        <article class="soda-card">
-          <p class="eyebrow">SHOW SUPPORT</p>
-          <h3>Encourage My Work</h3>
-          <div class="soda-amount">$20 USD</div>
-          <p>Help support my learning and ongoing projects.</p>
-          <button class="soda-button" type="button"
-            onclick="selectAmount(20)">Choose $20</button>
-        </article>
+          <p>Minimum custom contribution: $1 USD.</p>
+        </div>
+      </section>
 
-        <article class="soda-card">
-          <p class="eyebrow">GENEROUS SUPPORT</p>
-          <h3>Fuel the Journey</h3>
-          <div class="soda-amount">$50 USD</div>
-          <p>Contribute towards building skills and useful projects.</p>
-          <button class="soda-button" type="button"
-            onclick="selectAmount(50)">Choose $50</button>
-        </article>
+      <section class="section wrap">
+        <div class="soda-note">
+          <strong class="gold">Thank you for considering supporting my work!</strong>
+        </div>
+      </section>
 
-        <article class="soda-card">
-          <p class="eyebrow">EXTRAORDINARY SUPPORT</p>
-          <h3>Invest in Progress</h3>
-          <div class="soda-amount">$100 USD</div>
-          <p>A generous contribution that is deeply appreciated.</p>
-          <button class="soda-button" type="button"
-            onclick="selectAmount(100)">Choose $100</button>
-        </article>
-      </div>
-    </section>
+    </div>
 
-    <section class="section wrap">
+    <!-- STEP 2: SELECT A PAYMENT METHOD -->
+    <section class="section wrap" id="payment-section" style="display: none;">
+
       <div class="section-head">
         <div>
           <p class="eyebrow">YOUR CONTRIBUTION</p>
-          <h2>Choose your <span class="gold">amount.</span></h2>
+          <h1>Complete your <span class="gold">support.</span></h1>
+          <p id="payment-selected-amount" class="lead" aria-live="polite">
+            Selected contribution: $5 USD
+          </p>
         </div>
       </div>
 
-      <div class="soda-custom">
-        <label for="custom-amount">Custom amount in USD ($)</label>
+      <p>Choose your preferred payment method below.</p>
 
-        <input id="custom-amount"
-          type="number"
-          min="1"
-          step="0.01"
-          placeholder="Enter an amount in USD">
+      <div class="soda-payment-grid">
 
-        <p id="chosen-amount" aria-live="polite">
-          Selected amount: $5 USD
-        </p>
+        <article class="soda-card">
+          <h3>PayPal</h3>
 
-        <button class="soda-button" type="button"
-          onclick="useCustomAmount()">Set Custom Amount</button>
+          <p>
+            Send your contribution through PayPal using the email address below.
+          </p>
 
-        <p>
-          After selecting an amount, choose your preferred payment method below.
-        </p>
+          <p class="soda-detail" id="paypal-email">
+            wakiliongaro@gmail.com
+          </p>
+
+          <button class="soda-button" type="button"
+            onclick="copyPayment('paypal-email')">
+            Copy PayPal Email
+          </button>
+
+          <p>
+            Open PayPal separately, enter the selected USD amount,
+            and verify the recipient details before confirming payment.
+          </p>
+        </article>
+
+        <article class="soda-card">
+          <h3>M-PESA</h3>
+
+          <p>
+            You can also send your contribution using the M-PESA number below.
+          </p>
+
+          <p class="soda-detail" id="mpesa-number">0713500754</p>
+
+          <button class="soda-button" type="button"
+            onclick="copyPayment('mpesa-number')">
+            Copy M-PESA Number
+          </button>
+
+          <p>
+            M-PESA payments are made in KSh. Confirm the equivalent
+            amount in Kenyan shillings before sending.
+          </p>
+        </article>
+
       </div>
-    </section>
-
-    <section class="section wrap">
-      <div class="section-head">
-        <div>
-          <p class="eyebrow">PAYMENT OPTIONS</p>
-          <h2>Send your <span class="gold">support.</span></h2>
-        </div>
-      </div>
-
-
-<div class="soda-payment-grid">
-  <article class="soda-card">
-    <h3>PayPal</h3>
-
-    <p>
-      Prefer PayPal? Copy the email address below and use it
-      to send your contribution through PayPal.
-    </p>
-
-    <p class="soda-detail" id="paypal-email">
-      wakiliongaro@gmail.com
-    </p>
-
-    <button class="soda-button" type="button"
-      onclick="copyPayment('paypal-email')">
-      Copy PayPal Email
-    </button>
-
-    <p>
-      Enter the selected USD amount in PayPal and verify the
-      recipient details before confirming your payment.
-    </p>
-  </article>
-
-  <article class="soda-card">
-    <h3>M-PESA</h3>
-
-    <p>
-      If you prefer M-PESA, you can send your contribution using
-      the number below.
-    </p>
-
-    <p class="soda-detail" id="mpesa-number">0713500754</p>
-
-    <button class="soda-button" type="button"
-      onclick="copyPayment('mpesa-number')">
-      Copy M-PESA Number
-    </button>
-
-    <p>
-      M-PESA transactions are made in KSh. Confirm the equivalent
-      amount in Kenyan shillings before sending.
-    </p>
-  </article>
-</div>
-
 
       <div class="soda-note">
         <strong class="gold">Thank you for your support!</strong>
+        <p>Your generosity is appreciated.</p>
       </div>
+
+      <button class="soda-button secondary" type="button"
+        onclick="backToAmounts()">
+        ← Back to amounts
+      </button>
+
     </section>
 
-    <section class="section wrap">
+    <!-- OTHER PORTFOLIO CONTENT -->
+    <section class="section wrap" id="explore-section">
       <div class="section-head">
         <div>
           <p class="eyebrow">LET'S KEEP BUILDING</p>
@@ -199,6 +222,7 @@
         Thank you for visiting my portfolio and supporting my professional journey.
       </p>
     </section>
+
   </main>
 
   <footer class="site-footer">
@@ -221,13 +245,29 @@
   <script>
     let selectedAmount = 5;
 
-    function selectAmount(amount) {
+    function openPayment(amount) {
       selectedAmount = amount;
 
-      document.getElementById('chosen-amount').textContent =
-        'Selected amount: $' + amount + ' USD';
+      document.getElementById('payment-selected-amount').textContent =
+        'Selected contribution: $' +
+        selectedAmount.toLocaleString('en-US', {
+          minimumFractionDigits: 0,
+          maximumFractionDigits: 2
+        }) + ' USD';
 
+      document.getElementById('selection-view').style.display = 'none';
+      document.getElementById('explore-section').style.display = 'none';
+      document.getElementById('payment-section').style.display = '';
+
+      document.getElementById('payment-section').scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+
+    function selectAmount(amount) {
       document.getElementById('custom-amount').value = '';
+      openPayment(amount);
     }
 
     function useCustomAmount() {
@@ -240,10 +280,18 @@
         return;
       }
 
-      selectedAmount = Math.round(amount * 100) / 100;
+      openPayment(Math.round(amount * 100) / 100);
+    }
 
-      document.getElementById('chosen-amount').textContent =
-        'Selected amount: $' + selectedAmount.toFixed(2) + ' USD';
+    function backToAmounts() {
+      document.getElementById('payment-section').style.display = 'none';
+      document.getElementById('selection-view').style.display = '';
+      document.getElementById('explore-section').style.display = '';
+
+      document.getElementById('amounts-section').scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
     }
 
     async function copyPayment(id) {
@@ -257,5 +305,6 @@
       }
     }
   </script>
+
 </body>
 </html>
