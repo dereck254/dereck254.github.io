@@ -1,612 +1,268 @@
-
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Buy Dereck Cyber Cafe a soda and support independent digital projects, AI work, research, and technology.">
+  <meta name="description" content="Support Dereck Rawlings Ongaro's work in AI data annotation, AI evaluation, research, and software engineering.">
   <meta name="theme-color" content="#090909">
-
   <link rel="icon" type="image/png" href="favicon.png">
+  <title>Buy Me a Soda | Dereck Ongaro</title>
   <link rel="stylesheet" href="assets/style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-
   <script defer src="assets/script.js"></script>
 
-  <title>Buy Me a Soda | Dereck Cyber Cafe</title>
-
   <style>
-    .soda-page {
-      max-width: 1050px;
-      margin: 0 auto;
-    }
-
     .soda-intro {
+      max-width: 760px;
+      margin: 0 auto;
       text-align: center;
-      max-width: 720px;
-      margin: 0 auto 45px;
     }
 
-    .soda-icon {
-      width: 94px;
-      height: 94px;
-      margin: 0 auto 22px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border: 1px solid rgba(212, 175, 55, 0.45);
-      border-radius: 28px;
-      background: linear-gradient(145deg, #202020, #0c0c0c);
-      color: #d4af37;
-      font-size: 42px;
-      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+    .soda-intro .lead {
+      margin: 20px auto;
     }
 
-    .soda-intro h1 {
-      margin-bottom: 16px;
-    }
-
-    .soda-intro p {
-      line-height: 1.8;
-    }
-
-    .soda-cards {
+    .soda-grid {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 24px;
-      margin-bottom: 35px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+      margin-top: 42px;
     }
 
     .soda-card {
       padding: 28px;
-      border: 1px solid rgba(212, 175, 55, 0.28);
-      border-radius: 20px;
-      background: linear-gradient(145deg, #171717, #0b0b0b);
-      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.18);
+      border: 1px solid rgba(212, 175, 55, 0.25);
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.025);
     }
 
-    .soda-card h2 {
-      margin: 0 0 12px;
-    }
-
-    .soda-card > p {
-      line-height: 1.7;
-    }
-
-    .soda-payment-icon {
-      width: 54px;
-      height: 54px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 15px;
-      background: rgba(212, 175, 55, 0.1);
-      color: #d4af37;
-      font-size: 27px;
-      margin-bottom: 20px;
-    }
-
-    .soda-detail {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-      margin: 22px 0;
-      padding: 14px;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 12px;
-      background: #101010;
-      overflow-wrap: anywhere;
-    }
-
-    .soda-detail strong {
-      color: #d4af37;
-      overflow-wrap: anywhere;
-    }
-
-    .soda-copy {
-      flex-shrink: 0;
-      padding: 9px 12px;
-      border: 1px solid #d4af37;
-      border-radius: 8px;
-      background: transparent;
-      color: #d4af37;
-      cursor: pointer;
-      font: inherit;
-      font-size: 13px;
-      transition: background 0.2s ease, color 0.2s ease;
-    }
-
-    .soda-copy:hover {
-      background: #d4af37;
-      color: #090909;
-    }
-
-    .soda-amounts {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 10px;
-      margin: 20px 0;
+    .soda-card h3 {
+      margin-top: 0;
     }
 
     .soda-amount {
-      padding: 14px 8px;
-      border: 1px solid rgba(212, 175, 55, 0.45);
-      border-radius: 12px;
-      background: #111111;
-      color: #ffffff;
-      cursor: pointer;
-      font: inherit;
-      transition: 0.2s ease;
-    }
-
-    .soda-amount strong {
-      display: block;
-      color: #d4af37;
-      font-size: 19px;
-      margin-bottom: 4px;
-    }
-
-    .soda-amount span {
-      font-size: 12px;
-      opacity: 0.8;
-    }
-
-    .soda-amount:hover,
-    .soda-amount.active {
-      background: #d4af37;
-      color: #090909;
-    }
-
-    .soda-amount:hover strong,
-    .soda-amount.active strong {
-      color: #090909;
-    }
-
-    .soda-selected {
-      margin: 12px 0 20px;
-      color: #d4af37;
-      font-weight: 600;
-    }
-
-    .soda-custom {
-      display: block;
-      width: 100%;
-      box-sizing: border-box;
-      margin: 12px 0 20px;
-      padding: 13px 14px;
-      border: 1px solid rgba(212, 175, 55, 0.4);
-      border-radius: 10px;
-      background: #101010;
-      color: #ffffff;
-      font: inherit;
-    }
-
-    .soda-custom:focus {
-      outline: 2px solid #d4af37;
-      outline-offset: 2px;
-    }
-
-    .soda-steps {
-      padding-left: 22px;
-      line-height: 1.9;
-    }
-
-    .soda-action {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 9px;
-      width: 100%;
-      box-sizing: border-box;
-      padding: 14px 18px;
-      border: 1px solid #d4af37;
-      border-radius: 10px;
-      background: #d4af37;
-      color: #090909;
-      font: inherit;
+      margin: 18px 0;
+      font-size: 2rem;
       font-weight: 700;
-      text-align: center;
-      text-decoration: none;
-      cursor: pointer;
-      transition: 0.2s ease;
     }
 
-    .soda-action:hover {
-      background: #f0d574;
-      color: #090909;
-      transform: translateY(-1px);
+    .soda-card p {
+      line-height: 1.7;
     }
 
-    .soda-action.secondary {
-      margin-top: 10px;
-      background: transparent;
-      color: #d4af37;
+    .soda-card .button {
+      margin-top: 12px;
     }
 
-    .soda-action.secondary:hover {
-      background: rgba(212, 175, 55, 0.1);
+    .payment-detail {
+      overflow-wrap: anywhere;
+      font-weight: 700;
     }
 
     .soda-note {
-      margin-top: 15px;
-      font-size: 13px;
-      line-height: 1.7;
-      opacity: 0.8;
+      margin-top: 30px;
+      padding: 22px;
+      border-left: 3px solid var(--gold, #d4af37);
+      background: rgba(255, 255, 255, 0.035);
     }
 
-    .soda-thanks {
-      padding: 28px;
-      margin-top: 25px;
-      border: 1px solid rgba(212, 175, 55, 0.25);
-      border-radius: 18px;
-      background: rgba(212, 175, 55, 0.05);
-      text-align: center;
-    }
-
-    .soda-thanks h2 {
-      color: #d4af37;
-    }
-
-    .soda-status {
-      min-height: 22px;
-      margin: 12px 0 0;
-      color: #d4af37;
-      font-size: 13px;
-    }
-
-    @media (max-width: 700px) {
-      .soda-cards {
+    @media (max-width: 760px) {
+      .soda-grid {
         grid-template-columns: 1fr;
-      }
-
-      .soda-card {
-        padding: 22px;
-      }
-
-      .soda-intro {
-        margin-bottom: 30px;
-      }
-
-      .soda-amounts {
-        gap: 7px;
-      }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      .soda-action,
-      .soda-copy,
-      .soda-amount {
-        transition: none;
       }
     }
   </style>
 </head>
 
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
   <header class="site-header">
-    <nav class="navbar container" aria-label="Main navigation">
-      <a class="brand" href="index.html" aria-label="Home">DO</a>
+    <a class="brand" href="index.html">
+      <span class="brand-mark">DO</span>
+      <span>Dereck Ongaro</span>
+    </a>
 
-      <button
-        class="menu-toggle"
-        type="button"
-        aria-label="Toggle navigation"
-        aria-expanded="false"
-      >☰</button>
+    <button class="menu-toggle"
+      type="button"
+      aria-label="Open navigation"
+      aria-expanded="false">☰</button>
 
-      <div class="site-nav">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="blog.html">Blog</a>
-        <a href="contact.html">Contact</a>
-        <a href="soda.html" aria-current="page">Buy Me a Soda</a>
-      </div>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="blog.html">Blog</a>
+      <a class="nav-contact" href="contact.html">Contact</a>
+      <a class="active" href="soda.html" aria-current="page">Buy Me a Soda</a>
     </nav>
   </header>
 
-  <main class="section container soda-page">
+  <main id="main">
+    <section class="section wrap">
+      <div class="soda-intro">
+        <p class="eyebrow">A LITTLE SUPPORT GOES A LONG WAY</p>
 
-    <section class="soda-intro">
-      <div class="soda-icon" aria-hidden="true">
-        <i class="fa-solid fa-glass-water"></i>
-      </div>
+        <h1>Buy Me a <span class="gold">Soda.</span></h1>
 
-      <p class="eyebrow">SUPPORT INDEPENDENT DIGITAL WORK</p>
-
-      <h1>Buy Me a <span class="gold">Soda.</span></h1>
-
-      <p>
-        Enjoying my work or projects? You can support my journey by buying
-        me a soda. Every contribution helps me keep learning, creating,
-        and building useful digital experiences.
-      </p>
-
-      <p>
-        Whether you're in Kenya or somewhere else in the world,
-        your support is appreciated. No pressure, just good vibes!
-      </p>
-    </section>
-
-    <section aria-label="Choose a contribution">
-      <h2 style="text-align:center;">Choose your contribution</h2>
-
-      <p style="text-align:center;">
-        Select a suggested amount or enter your own.
-      </p>
-
-      <div class="soda-amounts">
-        <button class="soda-amount" type="button" data-amount="50">
-          <strong>KSh 50</strong>
-          <span>A small soda</span>
-        </button>
-
-        <button class="soda-amount active" type="button" data-amount="100">
-          <strong>KSh 100</strong>
-          <span>A kind gesture</span>
-        </button>
-
-        <button class="soda-amount" type="button" data-amount="200">
-          <strong>KSh 200</strong>
-          <span>Extra support</span>
-        </button>
-      </div>
-
-      <label for="custom-amount">Or enter a custom amount in KSh</label>
-
-      <input
-        class="soda-custom"
-        id="custom-amount"
-        type="number"
-        min="1"
-        step="1"
-        inputmode="numeric"
-        placeholder="Enter any amount"
-      >
-
-      <p class="soda-selected" id="selected-amount" aria-live="polite">
-        Selected contribution: KSh 100
-      </p>
-    </section>
-
-    <section class="soda-cards" aria-label="Payment methods">
-
-      <article class="soda-card">
-        <div class="soda-payment-icon" aria-hidden="true">
-          <i class="fa-solid fa-mobile-screen-button"></i>
-        </div>
-
-        <h2>M-PESA</h2>
+        <p class="lead">
+          If my work, projects, or resources have been useful to you,
+          you can support me with a small contribution. Every bit of
+          encouragement is appreciated.
+        </p>
 
         <p>
-          Supporting from Kenya? You can send your contribution manually
-          using M-PESA on your phone.
+          Choose an amount below and send your contribution using
+          M-PESA or PayPal.
         </p>
+      </div>
 
-        <div class="soda-detail">
-          <strong id="mpesa-number">0713500754</strong>
-          <button class="soda-copy" type="button" data-copy="mpesa-number">
-            <i class="fa-regular fa-copy" aria-hidden="true"></i> Copy
-          </button>
-        </div>
+      <div class="soda-grid">
+        <article class="soda-card">
+          <p class="eyebrow">SMALL GESTURE</p>
+          <h3>A Soda</h3>
+          <div class="soda-amount gold">KSh 50</div>
+          <p>A simple way to show appreciation and encourage my work.</p>
+          <button class="button button-outline" type="button"
+            onclick="selectAmount(50)">Choose KSh 50</button>
+        </article>
 
-        <h3>How to contribute</h3>
+        <article class="soda-card">
+          <p class="eyebrow">EXTRA ENCOURAGEMENT</p>
+          <h3>A Refreshment</h3>
+          <div class="soda-amount gold">KSh 100</div>
+          <p>Help me keep learning, building, and contributing to projects.</p>
+          <button class="button button-gold" type="button"
+            onclick="selectAmount(100)">Choose KSh 100</button>
+        </article>
 
-        <ol class="soda-steps">
-          <li>Open the M-PESA menu on your phone.</li>
-          <li>Choose Send Money.</li>
-          <li>Enter the number shown above.</li>
-          <li>Enter your chosen amount and review the recipient details carefully.</li>
-          <li>Confirm only if the recipient details are correct.</li>
-        </ol>
-
-        <button class="soda-action" type="button" id="mpesa-copy">
-          <i class="fa-solid fa-copy" aria-hidden="true"></i>
-          Copy number and amount
-        </button>
-
-        <p class="soda-note">
-          This is a manual transfer. Always verify the recipient name
-          displayed by M-PESA before confirming payment.
-        </p>
-      </article>
-
-      <article class="soda-card">
-        <div class="soda-payment-icon" aria-hidden="true">
-          <i class="fa-brands fa-paypal"></i>
-        </div>
-
-        <h2>PayPal</h2>
-
-        <p>
-          Outside Kenya? You can use PayPal to send support if your account
-          and the recipient's account support the transaction.
-        </p>
-
-        <div class="soda-detail">
-          <strong id="paypal-email">wakiliongaro@gmail.com</strong>
-          <button class="soda-copy" type="button" data-copy="paypal-email">
-            <i class="fa-regular fa-copy" aria-hidden="true"></i> Copy
-          </button>
-        </div>
-
-        <h3>How to contribute</h3>
-
-        <ol class="soda-steps">
-          <li>Copy the PayPal email shown above.</li>
-          <li>Open PayPal and sign in to your own account.</li>
-          <li>Choose the option to send money.</li>
-          <li>Enter the recipient email and your chosen amount.</li>
-          <li>Review the recipient and any applicable fees before sending.</li>
-        </ol>
-
-        <a
-          class="soda-action"
-          href="https://www.paypal.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <i class="fa-brands fa-paypal" aria-hidden="true"></i>
-          Open PayPal
-          <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
-        </a>
-
-        <p class="soda-note">
-          Copy the email above and enter it in PayPal. This button does
-          not initiate a payment or automatically fill in the amount.
-        </p>
-      </article>
-
+        <article class="soda-card">
+          <p class="eyebrow">GENEROUS SUPPORT</p>
+          <h3>Fuel the Work</h3>
+          <div class="soda-amount gold">KSh 200</div>
+          <p>A little extra support for my ongoing professional projects.</p>
+          <button class="button button-outline" type="button"
+            onclick="selectAmount(200)">Choose KSh 200</button>
+        </article>
+      </div>
     </section>
 
-    <p class="soda-status" id="soda-status" role="status" aria-live="polite"></p>
+    <section class="section wrap">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">YOUR CONTRIBUTION</p>
+          <h2>Choose your <span class="gold">amount.</span></h2>
+        </div>
+      </div>
 
-    <section class="soda-thanks">
-      <h2>Thank you for the support! 💛</h2>
+      <div class="soda-card">
+        <label for="custom-amount">Custom amount in KSh</label>
+        <input id="custom-amount" type="number" min="1"
+          step="1" placeholder="Enter amount"
+          style="display:block;width:100%;max-width:360px;margin:12px 0;padding:14px;">
 
-      <p>
-        Every contribution, regardless of size, means a lot. Your kindness
-        helps support independent learning, digital projects, and future ideas.
-      </p>
+        <p id="chosen-amount">Selected amount: KSh 50</p>
 
-      <p>
-        Prefer to connect first? Visit my
-        <a href="contact.html">contact page</a>.
-      </p>
+        <button class="button button-gold" type="button"
+          onclick="useCustomAmount()">Use custom amount</button>
+      </div>
     </section>
 
+    <section class="section wrap">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">MANUAL PAYMENT</p>
+          <h2>Send your support.</h2>
+        </div>
+      </div>
+
+      <div class="soda-grid">
+        <article class="soda-card">
+          <h3>M-PESA</h3>
+          <p>Send your contribution to this M-PESA number:</p>
+          <p class="payment-detail" id="mpesa-number">0713500754</p>
+          <button class="button button-gold" type="button"
+            onclick="copyPayment('mpesa-number')">Copy M-PESA number</button>
+          <p>Confirm the recipient details on your phone before sending.</p>
+        </article>
+
+        <article class="soda-card">
+          <h3>PayPal</h3>
+          <p>Use the PayPal email below to send your contribution:</p>
+          <p class="payment-detail" id="paypal-email">wakiliongaro@gmail.com</p>
+          <button class="button button-outline" type="button"
+            onclick="copyPayment('paypal-email')">Copy PayPal email</button>
+          <p>Open PayPal and follow its instructions to complete your payment.</p>
+        </article>
+
+        <article class="soda-card">
+          <h3>Thank you!</h3>
+          <p>Your support and encouragement mean a lot.</p>
+          <p>No contribution is required to explore my website or use publicly available resources.</p>
+          <a class="button button-outline" href="services.html">Explore my work ↗</a>
+        </article>
+      </div>
+
+      <div class="soda-note">
+        <strong class="gold">Please note:</strong>
+        These are manual payment details, not an integrated payment gateway.
+        Check the recipient details and amount before confirming a transaction.
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container">
-      <p>
-        AI Data Annotator · AI Trainer · AI Response Evaluator · Research &amp;
-        Writing Specialist · Legal &amp; Healthcare Research · Software Engineer · Data Analyst
-      </p>
+    <div class="wrap footer-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">DO</span>
+        <span>Dereck Ongaro</span>
+      </a>
 
       <p>
+        <strong>AI Data Annotator · AI Trainer · AI Response Evaluator · Research & Writing Specialist · Legal & Healthcare Researcher · Software Engineer · Data Analyst</strong>
+      </p>
+
+      <p class="copyright">
         © <span data-year></span> Dereck Rawlings Ongaro. All rights reserved.
       </p>
     </div>
   </footer>
 
   <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const amountButtons = document.querySelectorAll('.soda-amount');
-      const customAmount = document.querySelector('#custom-amount');
-      const selectedAmount = document.querySelector('#selected-amount');
-      const status = document.querySelector('#soda-status');
+    let selectedAmount = 50;
 
-      let amount = 100;
+    function selectAmount(amount) {
+      selectedAmount = amount;
+      document.getElementById('chosen-amount').textContent =
+        'Selected amount: KSh ' + amount;
+      document.getElementById('custom-amount').value = '';
+    }
 
-      function updateAmount(value) {
-        const parsed = Number(value);
+    function useCustomAmount() {
+      const field = document.getElementById('custom-amount');
+      const amount = Number(field.value);
 
-        if (!Number.isFinite(parsed) || parsed < 1 || !Number.isInteger(parsed)) {
-          selectedAmount.textContent = 'Enter a valid whole-number amount of at least KSh 1.';
-          amount = null;
-          return;
-        }
-
-        amount = parsed;
-        selectedAmount.textContent =
-          'Selected contribution: KSh ' + amount.toLocaleString('en-KE');
-
-        amountButtons.forEach(button => {
-          const active = Number(button.dataset.amount) === amount &&
-            customAmount.value === '';
-
-          button.classList.toggle('active', active);
-          button.setAttribute('aria-pressed', String(active));
-        });
+      if (!Number.isFinite(amount) || amount < 1) {
+        alert('Please enter a valid amount of at least KSh 1.');
+        return;
       }
 
-      amountButtons.forEach(button => {
-        button.setAttribute(
-          'aria-pressed',
-          String(Number(button.dataset.amount) === amount)
-        );
+      selectedAmount = amount;
+      document.getElementById('chosen-amount').textContent =
+        'Selected amount: KSh ' + amount;
+    }
 
-        button.addEventListener('click', () => {
-          customAmount.value = '';
-          updateAmount(button.dataset.amount);
-        });
-      });
+    async function copyPayment(id) {
+      const value = document.getElementById(id).textContent.trim();
 
-      customAmount.addEventListener('input', () => {
-        amountButtons.forEach(button => {
-          button.classList.remove('active');
-          button.setAttribute('aria-pressed', 'false');
-        });
-
-        if (customAmount.value === '') {
-          amount = 100;
-          selectedAmount.textContent = 'Selected contribution: KSh 100';
-          return;
-        }
-
-        updateAmount(customAmount.value);
-      });
-
-      async function copyText(text) {
-        if (navigator.clipboard && window.isSecureContext) {
-          await navigator.clipboard.writeText(text);
-          return;
-        }
-
-        const field = document.createElement('textarea');
-        field.value = text;
-        field.style.position = 'fixed';
-        field.style.opacity = '0';
-        document.body.appendChild(field);
-        field.select();
-
-        const copied = document.execCommand('copy');
-        field.remove();
-
-        if (!copied) {
-          throw new Error('Copy failed');
-        }
+      try {
+        await navigator.clipboard.writeText(value);
+        alert('Copied: ' + value);
+      } catch {
+        alert('Please copy this manually: ' + value);
       }
-
-      document.querySelectorAll('[data-copy]').forEach(button => {
-        button.addEventListener('click', async () => {
-          const element = document.getElementById(button.dataset.copy);
-
-          if (!element) return;
-
-          try {
-            await copyText(element.textContent.trim());
-            status.textContent = 'Copied successfully.';
-          } catch {
-            status.textContent = 'Copy failed. Please select and copy the details manually.';
-          }
-        });
-      });
-
-      document.querySelector('#mpesa-copy').addEventListener('click', async () => {
-        if (!Number.isInteger(amount) || amount < 1) {
-          status.textContent = 'Please choose a valid contribution amount first.';
-          return;
-        }
-
-        const details =
-          'M-PESA number: 0713500754\nContribution: KSh ' +
-          amount.toLocaleString('en-KE');
-
-        try {
-          await copyText(details);
-          status.textContent =
-            'M-PESA number and amount copied. Open M-PESA to complete your transfer.';
-        } catch {
-          status.textContent =
-            'Copy failed. Number: 0713500754. Amount: KSh ' +
-            amount.toLocaleString('en-KE') + '.';
-        }
-      });
-    });
+    }
   </script>
 </body>
 </html>
-
+```
