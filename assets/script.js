@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
   loader.innerHTML = `
     <div class="loader-spinner" aria-hidden="true"></div>
     <div class="loader-title">Dereck says…</div>
-    <div class="loader-message">Hold on tight!</div>
+    <div class="loader-message">Loading...Please wait!</div>
   `;
 
   document.body.appendChild(loader);
