@@ -130,6 +130,47 @@
 
 /* Slightly larger social media icons */
 .hero-links a i {
-  font-size: 1.25em;
+  font-size: 1.4em;
   margin-right: 5px;
 }
+
+
+/* Social icons: original brand colors */
+.hero-links a .fa-linkedin {
+  color: #0A66C2;
+}
+
+.hero-links a .fa-github {
+  color: #ffffff;
+}
+
+.hero-links a .fa-x-twitter {
+  color: #ffffff;
+}
+
+.hero-links a .fa-instagram {
+  color: #E4405F;
+}
+
+.hero-links a .fa-whatsapp {
+  color: #25D366;
+}
+
+/* Preserve brand colors when hovering */
+.hero-links a:hover .fa-linkedin {
+  color: #0A66C2;
+}
+
+.hero-links a:hover .fa-github,
+.hero-links a:hover .fa-x-twitter {
+  color: #ffffff;
+}
+
+.hero-links a:hover .fa-instagram {
+  color: #E4405F;
+}
+
+.hero-links a:hover .fa-whatsapp {
+  color: #25D366;
+}
+
