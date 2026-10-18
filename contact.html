@@ -117,31 +117,26 @@
         </div>
       </div>
 
-      <form class="contact-form" id="contact-form">
-        <p class="eyebrow">SEND AN INQUIRY</p>
-        <h2>Tell me about it.</h2>
-        <p class="form-note">
-          This static website prepares an email on your device; it does not send
-          or store submissions itself.
-        </p>
 
-        <label for="name">Your name</label>
-        <input id="name" name="name" autocomplete="name" required placeholder="Name">
+<form action="https://formsubmit.co/dereckongaro1086@gmail.com" method="POST">
+  <input type="hidden" name="_subject" value="New message from your portfolio">
+  <input type="hidden" name="_captcha" value="true">
 
-        <label for="email">Your email</label>
-        <input id="email" name="email" type="email" autocomplete="email"
-               required placeholder="you@example.com">
+  <label for="name">Your name</label>
+  <input id="name" type="text" name="name" required>
 
-        <label for="subject">Subject</label>
-        <input id="subject" name="subject" required placeholder="What is this about?">
+  <label for="email">Your email</label>
+  <input id="email" type="email" name="email" required>
 
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="5" required
-                  placeholder="Share a few details about your inquiry..."></textarea>
+  <label for="subject">Subject</label>
+  <input id="subject" type="text" name="subject" required>
 
-        <button class="button button-gold" type="submit">Prepare email ↗</button>
-        <p id="form-status" class="form-status" aria-live="polite"></p>
-      </form>
+  <label for="message">Your message</label>
+  <textarea id="message" name="message" required></textarea>
+
+  <button type="submit">Send Message ↗</button>
+</form>
+
     </section>
   </main>
 
