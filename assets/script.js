@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded',()=>{const y=document.querySelector('[data-year]');if(y)y.textContent=new Date().getFullYear();const t=document.querySelector('.menu-toggle'),n=document.querySelector('.site-nav');if(t&&n)t.addEventListener('click',()=>{const o=n.classList.toggle('open');t.setAttribute('aria-expanded',String(o));t.textContent=o?'×':'☰'});const f=document.querySelector('#contact-form');if(f)f.addEventListener('submit',e=>{e.preventDefault();const v=id=>document.querySelector(id).value.trim();const body=`Name: ${v('#name')}\nReply email: ${v('#email')}\n\n${v('#message')}`;document.querySelector('#form-status').textContent='Opening your email app. Review the message and press Send to deliver it.';location.href=`mailto:dereckongaro1086@gmail.com?subject=${encodeURIComponent(v('#subject'))}&body=${encodeURIComponent(body)}`})});
 
 
+
 /* Dereck Ongaro page transition loader */
 document.addEventListener("DOMContentLoaded", () => {
   // Prevent duplicate loaders
@@ -14,11 +15,22 @@ document.addEventListener("DOMContentLoaded", () => {
   loader.innerHTML = `
     <div class="loader-spinner" aria-hidden="true"></div>
     <div class="loader-title">Dereck says…</div>
-    <div class="loader-message">Loading...Please wait!</div>
+    <div class="loader-message">Loading... Please wait!</div>
   `;
 
   document.body.appendChild(loader);
 
+  // Hide the loader when a page is restored from browser history
+  window.addEventListener("pageshow", () => {
+    loader.classList.add("is-hidden");
+  });
+
+  // Hide the loader when leaving a page, including Back/Forward navigation
+  window.addEventListener("pagehide", () => {
+    loader.classList.add("is-hidden");
+  });
+
+  // Handle normal internal link clicks
   document.querySelectorAll("a[href]").forEach(link => {
     link.addEventListener("click", event => {
       if (
@@ -36,15 +48,17 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!href || href.startsWith("#")) return;
 
       let url;
+
       try {
         url = new URL(href, window.location.href);
       } catch {
         return;
       }
 
+      // Ignore external links
       if (url.origin !== window.location.origin) return;
 
-      // Skip the current page and same-page navigation
+      // Ignore links to the current page
       if (
         url.pathname === window.location.pathname &&
         url.search === window.location.search
@@ -59,4 +73,5 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
 
