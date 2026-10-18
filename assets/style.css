@@ -127,3 +127,9 @@
   background: #2563eb;
   transform: translateY(-3px);
 }
+
+/* Slightly larger social media icons */
+.hero-links a i {
+  font-size: 1.25em;
+  margin-right: 5px;
+}
