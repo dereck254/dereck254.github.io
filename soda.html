@@ -132,65 +132,56 @@
         </div>
       </div>
 
-      <div class="soda-payment-grid">
-        <article class="soda-card">
-          <h3>PayPal</h3>
 
-          <p>
-            Prefer PayPal? Open PayPal to send your contribution.
-            You may need to sign in and enter the recipient details.
-          </p>
+<div class="soda-payment-grid">
+  <article class="soda-card">
+    <h3>PayPal</h3>
 
-          <p class="soda-detail" id="paypal-email">
-            wakiliongaro@gmail.com
-          </p>
+    <p>
+      Prefer PayPal? Copy the email address below and use it
+      to send your contribution through PayPal.
+    </p>
 
-          <a class="soda-button"
-            href="https://www.paypal.com/send"
-            target="_blank"
-            rel="noopener noreferrer">
-            Open PayPal ↗
-          </a>
+    <p class="soda-detail" id="paypal-email">
+      wakiliongaro@gmail.com
+    </p>
 
-          <button class="soda-button secondary" type="button"
-            onclick="copyPayment('paypal-email')">
-            Copy PayPal Email
-          </button>
+    <button class="soda-button secondary" type="button"
+      onclick="copyPayment('paypal-email')">
+      Copy PayPal Email
+    </button>
 
-          <p>
-            Enter the selected USD amount in PayPal and verify the recipient
-            before confirming. The link opens PayPal; it does not automatically
-            prefill a payment to this email.
-          </p>
-        </article>
+    <p>
+      Enter the selected USD amount in PayPal and verify the
+      recipient details before confirming your payment.
+    </p>
+  </article>
 
-        <article class="soda-card">
-          <h3>M-PESA</h3>
+  <article class="soda-card">
+    <h3>M-PESA</h3>
 
-          <p>
-            If you prefer M-PESA, you can send your contribution using
-            the number below.
-          </p>
+    <p>
+      If you prefer M-PESA, you can send your contribution using
+      the number below.
+    </p>
 
-          <p class="soda-detail" id="mpesa-number">0713500754</p>
+    <p class="soda-detail" id="mpesa-number">0713500754</p>
 
-          <button class="soda-button" type="button"
-            onclick="copyPayment('mpesa-number')">
-            Copy M-PESA Number
-          </button>
+    <button class="soda-button" type="button"
+      onclick="copyPayment('mpesa-number')">
+      Copy M-PESA Number
+    </button>
 
-          <p>
-            M-PESA transactions are made in KSh. Confirm the equivalent
-            amount in Kenyan shillings before sending.
-          </p>
-        </article>
-      </div>
+    <p>
+      M-PESA transactions are made in KSh. Confirm the equivalent
+      amount in Kenyan shillings before sending.
+    </p>
+  </article>
+</div>
+
 
       <div class="soda-note">
         <strong class="gold">Thank you for your support!</strong>
-        Contributions are optional. Please confirm the recipient, currency,
-        and amount before completing a transaction. These are manual payment
-        options, not an integrated payment gateway.
       </div>
     </section>
 
