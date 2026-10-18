@@ -1,37 +1,23 @@
-# Dereck Rawlings Ongaro
-### AI Data Annotator | AI Response Evaluator | Research & Writing
+# Dereck Ongaro | AI Data Annotator
 
-Welcome to my professional portfolio.
+Responsive static portfolio for GitHub Pages.
 
-I work across AI data annotation, AI response evaluation, data quality assurance, research, writing, and software related projects. I value accuracy, attention to detail, clear communication, and continuous learning.
+## Pages
+- `index.html` — Home
+- `about.html` — About, story, and education
+- `services.html` — Services and work areas
+- `blog.html` — Blog landing page and planned topics
+- `contact.html` — WhatsApp, phone, SMS, email, and inquiry form
 
-## Areas of Expertise
+## Publish on GitHub Pages
+1. Extract this ZIP.
+2. Open https://github.com/dereck254/dereck254.github.io
+3. Upload the files and folders from inside `dereck-ongaro-website` to the repository root. The root should contain `index.html` and the `assets` folder.
+4. Commit changes to the `main` branch.
+5. Visit https://dereck254.github.io/ and refresh after publishing completes.
 
-- AI Data Annotation and Quality Assurance
-- AI Response Evaluation and Ranking
-- Research, Writing, Editing, and Documentation
-- Data Review and Content Assessment
-- Software Engineering and Technical Problem Solving
+## Contact form limitation
+GitHub Pages is static hosting. The form opens a prefilled email in the visitor’s email app; the visitor must press Send. It does not store submissions or send them directly.
 
-## Education
-
-- Stanford University
-- The University of Texas at Dallas
-- Maseno School
-- Kehancha Ravine School
-
-## Professional Experience
-
-My project experience includes AI training, data annotation, content evaluation, research, and writing through platforms and organizations including Meridial, TELUS Digital, LXT, Toloka, Remotasks, and Appen.
-
-## Connect With Me
-
-- **Portfolio:** https://dereck254.github.io/
-- **LinkedIn:** https://www.linkedin.com/in/dereck-ongaro-b73b51407/
-- **GitHub:** https://github.com/dereck254
-- **X:** https://x.com/DereckOngaro
-- **Email:** dereckongaro1086@gmail.com
-
-I am open to suitable remote opportunities, professional collaborations, and projects involving AI data quality, evaluation, research, and writing.
-
-*Thank you for visiting my profile.*
+## Before publishing
+Please verify all biographical and education details, including institutions, degree titles, and dates. Your date of birth and private location are not included.
