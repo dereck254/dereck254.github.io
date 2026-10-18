@@ -97,3 +97,33 @@
     transition: none;
   }
 }
+
+
+
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgba(96, 165, 250, 0.35);
+  border-radius: 50%;
+  color: #ffffff;
+  font-size: 21px;
+  text-decoration: none;
+  transition: color 0.25s ease,
+              background 0.25s ease,
+              transform 0.25s ease;
+}
+
+.social-links a:hover {
+  color: #ffffff;
+  background: #2563eb;
+  transform: translateY(-3px);
+}
