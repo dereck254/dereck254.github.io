@@ -174,3 +174,29 @@
   color: #25D366;
 }
 
+/* Official social media brand colors */
+.social-links .fa-linkedin {
+  color: #0A66C2;
+}
+
+.social-links .fa-github {
+  color: #ffffff;
+}
+
+.social-links .fa-x-twitter {
+  color: #ffffff;
+}
+
+.social-links .fa-instagram {
+  color: #E4405F;
+}
+
+.social-links .fa-whatsapp {
+  color: #25D366;
+}
+
+/* Keep brand colors when hovering */
+.social-links a:hover i {
+  opacity: 0.8;
+}
+
