@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       window.setTimeout(() => {
         window.location.assign(url.href);
-      }, 2000);
+      }, 800);
     });
   });
 });
