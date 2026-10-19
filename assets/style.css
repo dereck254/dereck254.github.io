@@ -998,11 +998,11 @@
 ======================================== */
 
 .experience-main {
-  --exp-navy: #091426;
-  --exp-panel: #101e33;
-  --exp-blue: #38bdf8;
-  --exp-white: #f8fafc;
-  --exp-muted: #b5c3d6;
+  --exp-navy: #080808;
+  --exp-panel: #141414;
+  --exp-blue: #d4af37;
+  --exp-white: #ffffff;
+  --exp-muted: #c2c2c2;
 
   background: var(--exp-navy);
   color: var(--exp-white);
