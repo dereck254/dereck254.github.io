@@ -1584,10 +1584,5 @@
   transition: background 0.2s ease, color 0.2s ease;
 }
 
-.skills-page .site-nav a[href="contact.html"]:hover {
-  background: #38bdf8;
-  color: #080808;
-}
-
 
 
