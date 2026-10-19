@@ -958,9 +958,9 @@
 }
 /* Dark header for the Soda page */
 .soda-page .site-header {
-  background: #071225;
+  background: #000000;
   color: #ffffff;
-  border-bottom: 1px solid #1e3a5f;
+  border-bottom: 1px solid #222222;
 }
 
 .soda-page .site-header .brand,
@@ -970,5 +970,21 @@
 
 .soda-page .site-header .site-nav a:hover,
 .soda-page .site-header .site-nav a.active {
+  color: #38bdf8;
+}
+
+.site-header {
+  background: #000000;
+  color: #ffffff;
+  border-bottom: 1px solid #222222;
+}
+
+.site-header .brand,
+.site-header .site-nav a {
+  color: #ffffff;
+}
+
+.site-header .site-nav a:hover,
+.site-header .site-nav a.active {
   color: #38bdf8;
 }
