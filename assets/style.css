@@ -401,3 +401,539 @@
   }
 }
 
+
+/* =========================================
+   BUY ME A SODA PAGE
+   Dark navy, electric blue and white
+========================================= */
+
+.soda-page {
+  --soda-bg: #081426;
+  --soda-bg-light: #0d1d34;
+  --soda-card: #10223c;
+  --soda-blue: #2589ff;
+  --soda-blue-light: #65b2ff;
+  --soda-white: #f5f8ff;
+  --soda-muted: #b7c5d9;
+  --soda-border: rgba(101, 178, 255, 0.22);
+
+  background: var(--soda-bg);
+  color: var(--soda-white);
+  line-height: 1.6;
+}
+
+.soda-page *,
+.soda-modal * {
+  box-sizing: border-box;
+}
+
+.soda-page button,
+.soda-modal button,
+.soda-page input {
+  font: inherit;
+}
+
+.soda-container {
+  width: min(1000px, 90%);
+  margin: 0 auto;
+}
+
+.soda-page .site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(8, 20, 38, 0.96);
+  border-bottom: 1px solid var(--soda-border);
+  backdrop-filter: blur(12px);
+}
+
+.soda-page .nav-container {
+  width: min(1120px, 92%);
+  min-height: 76px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.soda-page .brand {
+  color: var(--soda-white);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.soda-page .brand span,
+.soda-page .nav-links a.active {
+  color: var(--soda-blue-light);
+}
+
+.soda-page .nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.soda-page .nav-links a {
+  color: var(--soda-muted);
+  font-size: 0.94rem;
+  text-decoration: none;
+}
+
+.soda-page .nav-links a:hover {
+  color: var(--soda-blue-light);
+}
+
+.soda-page .nav-links .nav-contact {
+  padding: 9px 16px;
+  border-radius: 9px;
+  background: var(--soda-blue);
+  color: white;
+  font-weight: 700;
+}
+
+.soda-page .nav-links .nav-contact:hover {
+  background: #0875ee;
+  color: white;
+}
+
+.soda-hero {
+  padding: 90px 0 55px;
+  text-align: center;
+}
+
+.soda-hero-icon {
+  width: 76px;
+  height: 76px;
+  margin: 0 auto 25px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--soda-border);
+  border-radius: 22px;
+  background: var(--soda-bg-light);
+  font-size: 2.4rem;
+}
+
+.soda-eyebrow {
+  margin: 0 0 12px;
+  color: var(--soda-blue-light);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.soda-hero h1 {
+  max-width: 780px;
+  margin: 0 auto 20px;
+  font-size: clamp(2.3rem, 6vw, 4.3rem);
+  line-height: 1.12;
+  letter-spacing: -1.5px;
+}
+
+.soda-hero h1 span {
+  color: var(--soda-blue-light);
+}
+
+.soda-hero-description {
+  max-width: 660px;
+  margin: 0 auto;
+  color: var(--soda-muted);
+  font-size: 1.08rem;
+}
+
+.soda-support-section {
+  padding: 18px 0 85px;
+}
+
+.soda-section-heading {
+  margin-bottom: 28px;
+  text-align: center;
+}
+
+.soda-section-heading h2 {
+  margin: 0 0 8px;
+  font-size: clamp(1.7rem, 4vw, 2.3rem);
+}
+
+.soda-section-heading p {
+  margin: 0;
+  color: var(--soda-muted);
+}
+
+.soda-amount-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.soda-amount-card {
+  padding: 24px 15px;
+  text-align: center;
+  background: var(--soda-card);
+  border: 1px solid var(--soda-border);
+  border-radius: 18px;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.soda-amount-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--soda-blue);
+}
+
+.soda-amount-card h3 {
+  margin: 0 0 6px;
+  font-size: 2rem;
+}
+
+.soda-amount-card p {
+  margin: 0 0 18px;
+  color: var(--soda-muted);
+  font-size: 0.9rem;
+}
+
+.soda-button {
+  display: inline-flex;
+  min-height: 45px;
+  align-items: center;
+  justify-content: center;
+  padding: 11px 17px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  background: var(--soda-blue);
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.soda-button:hover {
+  background: #0875ee;
+}
+
+.soda-button:focus-visible,
+.soda-page input:focus-visible,
+.soda-page a:focus-visible {
+  outline: 3px solid var(--soda-blue-light);
+  outline-offset: 3px;
+}
+
+.soda-amount-card .soda-button {
+  width: 100%;
+}
+
+.soda-custom-box {
+  max-width: 620px;
+  margin: 26px auto 0;
+  padding: 28px;
+  background: var(--soda-bg-light);
+  border: 1px solid var(--soda-border);
+  border-radius: 18px;
+}
+
+.soda-custom-box h3 {
+  margin: 0 0 8px;
+  font-size: 1.3rem;
+}
+
+.soda-custom-box > p {
+  margin: 0 0 18px;
+  color: var(--soda-muted);
+}
+
+.soda-custom-box label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.soda-custom-input-row {
+  display: flex;
+  gap: 12px;
+}
+
+.soda-custom-input-row input {
+  min-width: 0;
+  flex: 1;
+  padding: 12px 14px;
+  border: 1px solid #36516f;
+  border-radius: 10px;
+  background: #071225;
+  color: var(--soda-white);
+}
+
+.soda-custom-input-row input::placeholder {
+  color: #8da0ba;
+}
+
+.soda-custom-preview {
+  min-height: 26px;
+  margin: 12px 0 0 !important;
+  color: var(--soda-blue-light) !important;
+  font-size: 0.94rem;
+}
+
+.soda-rate-disclaimer {
+  max-width: 720px;
+  margin: 24px auto 0;
+  color: var(--soda-muted);
+  font-size: 0.88rem;
+  text-align: center;
+}
+
+.soda-page .site-footer {
+  padding: 25px 0;
+  border-top: 1px solid var(--soda-border);
+  color: var(--soda-muted);
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.soda-page .site-footer p {
+  margin: 4px 0;
+}
+
+/* Payment pop-up */
+
+.soda-modal {
+  width: min(760px, calc(100% - 24px));
+  max-width: 760px;
+  max-height: 90vh;
+  overflow-y: auto;
+  margin: auto;
+  padding: 0;
+  border: 1px solid var(--soda-blue);
+  border-radius: 20px;
+  background: var(--soda-bg);
+  color: var(--soda-white);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.65);
+}
+
+.soda-modal::backdrop {
+  background: rgba(2, 8, 18, 0.82);
+  backdrop-filter: blur(6px);
+}
+
+.soda-modal-inner {
+  padding: 30px;
+}
+
+.soda-modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.soda-modal-header h2 {
+  margin: 0;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  line-height: 1.25;
+}
+
+.soda-modal-close {
+  flex-shrink: 0;
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  padding: 0;
+  border: 1px solid var(--soda-border);
+  border-radius: 50%;
+  background: var(--soda-card);
+  color: var(--soda-white);
+  font-size: 1.8rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.soda-modal-close:hover {
+  background: #1b3657;
+}
+
+.soda-conversion-box {
+  margin-bottom: 24px;
+  padding: 22px;
+  border: 1px solid var(--soda-border);
+  border-radius: 15px;
+  background: var(--soda-bg-light);
+}
+
+.soda-conversion-label {
+  margin: 0 0 10px;
+  color: var(--soda-muted);
+  font-size: 0.85rem;
+}
+
+.soda-conversion-values {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 12px;
+}
+
+.soda-conversion-side {
+  min-width: 0;
+}
+
+.soda-conversion-side:last-child {
+  text-align: right;
+}
+
+.soda-conversion-currency {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--soda-blue-light);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.soda-conversion-value {
+  display: block;
+  overflow-wrap: anywhere;
+  font-size: clamp(1.15rem, 3.5vw, 1.8rem);
+  font-weight: 800;
+}
+
+.soda-conversion-equals {
+  color: var(--soda-muted);
+  font-size: 1.4rem;
+}
+
+.soda-rate-note {
+  margin: 16px 0 0;
+  color: var(--soda-muted);
+  font-size: 0.84rem;
+  line-height: 1.5;
+}
+
+.soda-retry-button {
+  display: none;
+  margin-top: 10px;
+  padding: 7px 12px;
+  border: 1px solid var(--soda-border);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--soda-blue-light);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.soda-payment-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.soda-payment-card {
+  min-width: 0;
+  padding: 22px;
+  border: 1px solid var(--soda-border);
+  border-radius: 15px;
+  background: var(--soda-card);
+}
+
+.soda-payment-card h3 {
+  margin: 0 0 8px;
+  font-size: 1.4rem;
+}
+
+.soda-payment-card > p:not(.soda-eyebrow) {
+  color: var(--soda-muted);
+  font-size: 0.93rem;
+}
+
+.soda-payment-detail {
+  margin: 18px 0;
+  padding: 12px 8px;
+  overflow-wrap: anywhere;
+  border: 1px solid var(--soda-border);
+  border-radius: 9px;
+  background: var(--soda-bg);
+  text-align: center;
+  font-weight: 700;
+}
+
+.soda-copy-button {
+  width: 100%;
+}
+
+.soda-modal-disclaimer {
+  margin: 20px 0 0;
+  color: var(--soda-muted);
+  font-size: 0.85rem;
+}
+
+.soda-back-button {
+  width: 100%;
+  margin-top: 22px;
+  border-color: var(--soda-border);
+  background: transparent;
+  color: var(--soda-blue-light);
+}
+
+.soda-back-button:hover {
+  background: var(--soda-card);
+}
+
+@media (max-width: 760px) {
+  .soda-page .nav-container {
+    padding: 15px 0;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .soda-page .nav-links {
+    justify-content: flex-start;
+    gap: 13px;
+  }
+
+  .soda-amount-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .soda-hero {
+    padding-top: 65px;
+  }
+}
+
+@media (max-width: 520px) {
+  .soda-custom-input-row {
+    flex-direction: column;
+  }
+
+  .soda-custom-input-row .soda-button {
+    width: 100%;
+  }
+
+  .soda-payment-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .soda-modal-inner {
+    padding: 20px;
+  }
+
+  .soda-conversion-box {
+    padding: 16px 12px;
+  }
+
+  .soda-conversion-values {
+    gap: 7px;
+  }
+
+  .soda-conversion-value {
+    font-size: 1.15rem;
+  }
+
+  .soda-amount-card {
+    padding: 20px 12px;
+  }
+}
