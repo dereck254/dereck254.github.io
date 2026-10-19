@@ -656,10 +656,10 @@
   gap: 12px;
 }
 
-
 .soda-custom-input-row input {
-  min-width: 0;
   flex: 1;
+  width: 100%;
+  min-width: 0;
   min-height: 58px;
   padding: 16px 20px;
   border: 1px solid #36516f;
@@ -667,7 +667,13 @@
   background: #071225;
   color: var(--soda-white);
   font-size: 1.1rem;
+  box-sizing: border-box;
+}
+
+.soda-custom-input-row {
+  display: flex;
   width: 100%;
+  gap: 12px;
 }
 
 .soda-custom-input-row input::placeholder {
