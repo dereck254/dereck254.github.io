@@ -988,3 +988,7 @@
 .site-header .site-nav a.active {
   color: #38bdf8;
 }
+
+.site-nav a.active {
+  color: #38bdf8;
+}
