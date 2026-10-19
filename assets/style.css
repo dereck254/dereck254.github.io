@@ -956,3 +956,19 @@
     padding: 20px 12px;
   }
 }
+/* Dark header for the Soda page */
+.soda-page .site-header {
+  background: #071225;
+  color: #ffffff;
+  border-bottom: 1px solid #1e3a5f;
+}
+
+.soda-page .site-header .brand,
+.soda-page .site-header .site-nav a {
+  color: #ffffff;
+}
+
+.soda-page .site-header .site-nav a:hover,
+.soda-page .site-header .site-nav a.active {
+  color: #38bdf8;
+}
