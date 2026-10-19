@@ -1550,3 +1550,25 @@
   }
 }
 
+
+/* Fix Skills page navigation alignment and active color */
+.skills-page .header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.skills-page .site-nav {
+  margin-left: auto;
+  justify-content: flex-end;
+}
+
+.skills-page .site-header .site-nav a.active {
+  color: #38bdf8;
+}
+
+.skills-page .site-header .site-nav a:hover {
+  color: #38bdf8;
+}
+
+
