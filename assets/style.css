@@ -1590,4 +1590,24 @@
 }
 
 
+/* Contact button: gold rectangle with white text */
+.skills-page .site-nav a[href="contact.html"] {
+  display: inline-block;
+  padding: 10px 18px;
+  background: #d4af37;
+  border: 1px solid #d4af37;
+  border-radius: 4px;
+  color: #ffffff !important;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* Keep the button gold when hovered */
+.skills-page .site-nav a[href="contact.html"]:hover {
+  background: #d4af37;
+  border-color: #d4af37;
+  color: #ffffff !important;
+}
+
+
 
