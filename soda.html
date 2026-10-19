@@ -1,310 +1,208 @@
-
 <!doctype html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Support Dereck Rawlings Ongaro's AI data annotation, AI evaluation, research, writing, and software projects.">
-  <meta name="theme-color" content="#090909">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#081426">
+
+  <title>Buy Me a Soda | Dereck Ongaro</title>
+  <meta name="description" content="Support Dereck Ongaro through PayPal or M-PESA.">
+
   <link rel="icon" href="/favicon.png" type="image/png">
   <link rel="shortcut icon" href="/favicon.png" type="image/png">
-  <title>Buy Me a Soda | Dereck Ongaro</title>
 
   <link rel="stylesheet" href="assets/style.css">
-  <script defer src="assets/script.js"></script>
+  <script src="assets/script.js" defer></script>
 </head>
 
 <body class="soda-page">
-  <a class="skip-link" href="#main">Skip to content</a>
-
   <header class="site-header">
-    <a class="brand" href="index.html">
-      <span class="brand-mark">DO</span>
-      <span>Dereck Ongaro</span>
-    </a>
+    <div class="nav-container">
+      <a class="brand" href="index.html">Dereck <span>Ongaro</span></a>
 
-    <button class="menu-toggle"
-      type="button"
-      aria-label="Open navigation"
-      aria-expanded="false">☰</button>
-
-    <nav class="site-nav" aria-label="Main navigation">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="blog.html">Blog</a>
-      <a class="nav-contact" href="contact.html">Contact</a>
-      <a class="active" href="soda.html" aria-current="page">Buy Me a Soda</a>
-    </nav>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="soda.html" class="active" aria-current="page">Support Me</a>
+        <a class="nav-contact" href="contact.html">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <main id="main">
-
-    <!-- STEP 1: CHOOSE AN AMOUNT -->
-    <div id="selection-view">
-
-      <section class="section wrap" id="amounts-section">
-        <div class="soda-intro">
-          <p class="eyebrow">A LITTLE SUPPORT GOES A LONG WAY</p>
-
-          <h1>Buy Me a <span class="gold">Soda.</span></h1>
-
-          <p class="lead">
-            If my work, projects, or resources have been helpful to you,
-            you can support me with a contribution. Your generosity helps
-            encourage continued learning, creativity, and professional growth.
-          </p>
-
-          <p>Choose an amount in US dollars below.</p>
-        </div>
-
-        <div class="soda-grid">
-
-          <article class="soda-card">
-            <p class="eyebrow">A SMALL GESTURE</p>
-            <h3>Buy a Soda</h3>
-            <div class="soda-amount">$5 USD</div>
-            <p>A small contribution to show your appreciation.</p>
-            <button class="soda-button" type="button"
-              onclick="selectAmount(5)">Choose $5</button>
-          </article>
-
-          <article class="soda-card">
-            <p class="eyebrow">SHOW SUPPORT</p>
-            <h3>Encourage My Work</h3>
-            <div class="soda-amount">$20 USD</div>
-            <p>Help support my learning and ongoing projects.</p>
-            <button class="soda-button" type="button"
-              onclick="selectAmount(20)">Choose $20</button>
-          </article>
-
-          <article class="soda-card">
-            <p class="eyebrow">GENEROUS SUPPORT</p>
-            <h3>Fuel the Journey</h3>
-            <div class="soda-amount">$50 USD</div>
-            <p>Contribute towards building skills and useful projects.</p>
-            <button class="soda-button" type="button"
-              onclick="selectAmount(50)">Choose $50</button>
-          </article>
-
-          <article class="soda-card">
-            <p class="eyebrow">EXTRAORDINARY SUPPORT</p>
-            <h3>Invest in Progress</h3>
-            <div class="soda-amount">$100 USD</div>
-            <p>A generous contribution that is deeply appreciated.</p>
-            <button class="soda-button" type="button"
-              onclick="selectAmount(100)">Choose $100</button>
-          </article>
-
-        </div>
-      </section>
-
-      <section class="section wrap" id="custom-section">
-        <div class="section-head">
-          <div>
-            <p class="eyebrow">YOUR CONTRIBUTION</p>
-            <h2>Choose your <span class="gold">amount.</span></h2>
-          </div>
-        </div>
-
-        <div class="soda-custom">
-          <label for="custom-amount">Custom amount in USD ($)</label>
-
-          <input id="custom-amount"
-            type="number"
-            min="1"
-            step="0.01"
-            placeholder="Enter an amount in USD">
-
-          <button class="soda-button" type="button"
-            onclick="useCustomAmount()">Continue with Custom Amount</button>
-
-          <p>Minimum custom contribution: $1 USD.</p>
-        </div>
-      </section>
-
-      <section class="section wrap">
-        <div class="soda-note">
-          <strong class="gold">Thank you for considering supporting my work!</strong>
-        </div>
-      </section>
-
-    </div>
-
-    <!-- STEP 2: SELECT A PAYMENT METHOD -->
-    <section class="section wrap" id="payment-section" style="display: none;">
-
-      <div class="section-head">
-        <div>
-          <p class="eyebrow">YOUR CONTRIBUTION</p>
-          <h1>Complete your <span class="gold">support.</span></h1>
-          <p id="payment-selected-amount" class="lead" aria-live="polite">
-            Selected contribution: $5 USD
-          </p>
-        </div>
+  <main>
+    <section class="soda-hero">
+      <div class="soda-container">
+        <div class="soda-hero-icon" aria-hidden="true">🥤</div>
+        <p class="soda-eyebrow">Your support means a lot</p>
+        <h1>Buy Me a <span>Soda</span></h1>
+        <p class="soda-hero-description">
+          Enjoying my work or want to support what I'm building?
+          Contribute any amount you're comfortable with.
+          Every contribution is appreciated. Thank you!
+        </p>
       </div>
-
-      <p>Choose your preferred payment method below.</p>
-
-      <div class="soda-payment-grid">
-
-        <article class="soda-card">
-          <h3>PayPal</h3>
-
-          <p>
-            Send your contribution through PayPal using the email address below.
-          </p>
-
-          <p class="soda-detail" id="paypal-email">
-            wakiliongaro@gmail.com
-          </p>
-
-          <button class="soda-button" type="button"
-            onclick="copyPayment('paypal-email')">
-            Copy PayPal Email
-          </button>
-
-          <p>
-            Open PayPal separately, enter the selected USD amount,
-            and verify the recipient details before confirming payment.
-          </p>
-        </article>
-
-        <article class="soda-card">
-          <h3>M-PESA</h3>
-
-          <p>
-            You can also send your contribution using the M-PESA number below.
-          </p>
-
-          <p class="soda-detail" id="mpesa-number">0713500754</p>
-
-          <button class="soda-button" type="button"
-            onclick="copyPayment('mpesa-number')">
-            Copy M-PESA Number
-          </button>
-
-          <p>
-            M-PESA payments are made in KSh. Confirm the equivalent
-            amount in Kenyan shillings before sending.
-          </p>
-        </article>
-
-      </div>
-
-      <div class="soda-note">
-        <strong class="gold">Thank you for your support!</strong>
-        <p>Your generosity is appreciated.</p>
-      </div>
-
-      <button class="soda-button secondary" type="button"
-        onclick="backToAmounts()">
-        ← Back to amounts
-      </button>
-
     </section>
 
-    <!-- OTHER PORTFOLIO CONTENT -->
-    <section class="section wrap" id="explore-section">
-      <div class="section-head">
-        <div>
-          <p class="eyebrow">LET'S KEEP BUILDING</p>
-          <h2>Explore my <span class="gold">work.</span></h2>
+    <section class="soda-support-section" id="amounts-section">
+      <div class="soda-container">
+        <div class="soda-section-heading">
+          <h2>Choose Your Contribution</h2>
+          <p>Select an amount to see payment options and its estimated value in Kenyan shillings.</p>
         </div>
 
-        <a class="soda-button" href="services.html">
-          Explore Services ↗
-        </a>
+        <div class="soda-amount-grid">
+          <article class="soda-amount-card">
+            <h3>$5</h3>
+            <p>A little support</p>
+            <button class="soda-button" type="button" data-soda-amount="5">Choose $5</button>
+          </article>
+
+          <article class="soda-amount-card">
+            <h3>$20</h3>
+            <p>Great support</p>
+            <button class="soda-button" type="button" data-soda-amount="20">Choose $20</button>
+          </article>
+
+          <article class="soda-amount-card">
+            <h3>$50</h3>
+            <p>Extra support</p>
+            <button class="soda-button" type="button" data-soda-amount="50">Choose $50</button>
+          </article>
+
+          <article class="soda-amount-card">
+            <h3>$100</h3>
+            <p>Outstanding support</p>
+            <button class="soda-button" type="button" data-soda-amount="100">Choose $100</button>
+          </article>
+        </div>
+
+        <div class="soda-custom-box">
+          <h3>Choose Your Own Amount</h3>
+          <p>Enter any amount from $1 USD upward, including cents.</p>
+
+          <form id="custom-amount-form">
+            <label for="custom-amount">Contribution amount (USD)</label>
+
+            <div class="soda-custom-input-row">
+              <input
+                id="custom-amount"
+                name="amount"
+                type="number"
+                min="1"
+                max="1000000"
+                step="0.01"
+                placeholder="For example, 12.50"
+                inputmode="decimal"
+                required
+              >
+
+              <button class="soda-button" type="submit">Continue</button>
+            </div>
+
+            <p class="soda-custom-preview" id="custom-preview" aria-live="polite">
+              Your estimated KSh equivalent will appear here.
+            </p>
+          </form>
+        </div>
+
+        <p class="soda-rate-disclaimer">
+          Currency conversions are estimates. Your payment provider may use a
+          different exchange rate or charge fees.
+        </p>
       </div>
-
-      <p class="lead">
-        Thank you for visiting my portfolio and supporting my professional journey.
-      </p>
     </section>
-
   </main>
 
   <footer class="site-footer">
-    <div class="wrap footer-inner">
-      <a class="brand" href="index.html">
-        <span class="brand-mark">DO</span>
-        <span>Dereck Ongaro</span>
-      </a>
-
-      <p>
-        <strong>AI Data Annotator · AI Trainer · AI Response Evaluator · Research & Writing Specialist · Legal & Healthcare Researcher · Software Engineer · Data Analyst</strong>
-      </p>
-
-      <p class="copyright">
-        © <span data-year></span> Dereck Rawlings Ongaro. All rights reserved.
-      </p>
+    <div class="soda-container">
+      <p>© <span id="soda-current-year"></span> Dereck Ongaro. All rights reserved.</p>
+      <p>Thank you for your support 💙</p>
     </div>
   </footer>
 
-  <script>
-    let selectedAmount = 5;
+  <dialog id="payment-modal" class="soda-modal" aria-labelledby="payment-title">
+    <div class="soda-modal-inner">
+      <div class="soda-modal-header">
+        <div>
+          <p class="soda-eyebrow">SUPPORT DERECK ONGARO</p>
+          <h2 id="payment-title">Complete Your Contribution</h2>
+        </div>
 
-    function openPayment(amount) {
-      selectedAmount = amount;
+        <button
+          type="button"
+          class="soda-modal-close"
+          id="close-modal"
+          aria-label="Close payment window"
+        >×</button>
+      </div>
 
-      document.getElementById('payment-selected-amount').textContent =
-        'Selected contribution: $' +
-        selectedAmount.toLocaleString('en-US', {
-          minimumFractionDigits: 0,
-          maximumFractionDigits: 2
-        }) + ' USD';
+      <section class="soda-conversion-box" aria-label="Currency conversion">
+        <p class="soda-conversion-label">Your contribution and estimated conversion</p>
 
-      document.getElementById('selection-view').style.display = 'none';
-      document.getElementById('explore-section').style.display = 'none';
-      document.getElementById('payment-section').style.display = '';
+        <div class="soda-conversion-values">
+          <div class="soda-conversion-side">
+            <span class="soda-conversion-currency">US dollars</span>
+            <strong id="payment-usd" class="soda-conversion-value">$5.00</strong>
+          </div>
 
-      document.getElementById('payment-section').scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-      });
-    }
+          <span class="soda-conversion-equals" aria-hidden="true">=</span>
 
-    function selectAmount(amount) {
-      document.getElementById('custom-amount').value = '';
-      openPayment(amount);
-    }
+          <div class="soda-conversion-side">
+            <span class="soda-conversion-currency">Kenyan shillings</span>
+            <strong id="payment-kes" class="soda-conversion-value">Loading...</strong>
+          </div>
+        </div>
 
-    function useCustomAmount() {
-      const field = document.getElementById('custom-amount');
-      const amount = Number(field.value);
+        <p id="exchange-rate-note" class="soda-rate-note" aria-live="polite">
+          Fetching the latest available exchange rate...
+        </p>
 
-      if (!Number.isFinite(amount) || amount < 1) {
-        alert('Please enter a valid amount of at least $1 USD.');
-        field.focus();
-        return;
-      }
+        <button type="button" class="soda-retry-button" id="retry-rate">
+          Retry exchange rate
+        </button>
+      </section>
 
-      openPayment(Math.round(amount * 100) / 100);
-    }
+      <div class="soda-payment-grid">
+        <section class="soda-payment-card">
+          <p class="soda-eyebrow">INTERNATIONAL PAYMENT</p>
+          <h3>PayPal</h3>
+          <p>Use this email address for your PayPal contribution.</p>
 
-    function backToAmounts() {
-      document.getElementById('payment-section').style.display = 'none';
-      document.getElementById('selection-view').style.display = '';
-      document.getElementById('explore-section').style.display = '';
+          <div class="soda-payment-detail" id="paypal-email">
+            wakiliongaro@gmail.com
+          </div>
 
-      document.getElementById('amounts-section').scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-      });
-    }
+          <button type="button" class="soda-button soda-copy-button" data-copy="paypal-email">
+            Copy PayPal Email
+          </button>
+        </section>
 
-    async function copyPayment(id) {
-      const value = document.getElementById(id).textContent.trim();
+        <section class="soda-payment-card">
+          <p class="soda-eyebrow">KENYA</p>
+          <h3>M-PESA</h3>
+          <p>Use this number for your M-PESA contribution.</p>
 
-      try {
-        await navigator.clipboard.writeText(value);
-        alert('Copied successfully: ' + value);
-      } catch (error) {
-        window.prompt('Copy this payment detail:', value);
-      }
-    }
-  </script>
+          <div class="soda-payment-detail" id="mpesa-number">
+            0713500754
+          </div>
 
+          <button type="button" class="soda-button soda-copy-button" data-copy="mpesa-number">
+            Copy M-PESA Number
+          </button>
+        </section>
+      </div>
+
+      <p class="soda-modal-disclaimer">
+        The KSh figure is an estimate, not a guaranteed payment amount.
+        Your bank or payment service may apply its own exchange rate and fees.
+        Confirm the final amount before sending.
+      </p>
+
+      <button type="button" class="soda-button soda-back-button" id="back-to-amounts">
+        ← Back to amounts
+      </button>
+    </div>
+  </dialog>
 </body>
 </html>
