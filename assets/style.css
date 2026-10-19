@@ -359,6 +359,14 @@
   color: #bdbdbd;
 }
 
+.soda-custom-input-row {
+  flex-direction: column;
+}
+
+.soda-custom-input-row button {
+  width: 100%;
+}
+
 .soda-custom input:focus {
   outline: 2px solid #e6bd55;
   outline-offset: 2px;
