@@ -656,18 +656,23 @@
   gap: 12px;
 }
 
+
 .soda-custom-input-row input {
   min-width: 0;
   flex: 1;
-  padding: 12px 14px;
+  min-height: 58px;
+  padding: 16px 20px;
   border: 1px solid #36516f;
-  border-radius: 10px;
+  border-radius: 12px;
   background: #071225;
   color: var(--soda-white);
+  font-size: 1.1rem;
+  width: 100%;
 }
 
 .soda-custom-input-row input::placeholder {
   color: #8da0ba;
+  font-size: 1rem;
 }
 
 .soda-custom-preview {
