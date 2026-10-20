@@ -1585,50 +1585,87 @@
 }
 
 
-/* ========================================
-   GLOBAL CERTIFICATE AND SECTION SPACING
-   Applies to all certificates, including
-   certificates added in the future.
-======================================== */
 
-/* Add breathing room around certification sections */
+/* =========================================
+   GLOBAL CERTIFICATE AND SECTION STYLING
+   Applies to all current and future certificates
+========================================= */
+
+/* General section spacing */
 .skills-page {
   padding-top: 50px;
   padding-bottom: 50px;
 }
 
-/* Consistent spacing between all certificate cards */
-.certificate-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 30px;
-  margin-top: 30px;
+/* Space and gold dividers before these sections */
+#ibm-certifications,
+#achievements {
+  display: flow-root;
+  margin-top: 60px;
+  padding-top: 40px;
+  border-top: 1px solid rgba(212, 175, 55, 0.65);
 }
 
-/* Separate every certificate card visually */
+/* Section headings */
+#ibm-certifications h2,
+#achievements h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+/* Stack all certificate and achievement cards vertically */
+.certificate-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+/* Wide horizontal cards */
 .certificate-card {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 24px;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
   box-sizing: border-box;
-  height: 100%;
   margin: 0;
-  padding: 22px;
-  border: 1px solid rgba(212, 175, 55, 0.3);
+  padding: 24px;
+  border: 1px solid rgba(212, 175, 55, 0.4);
   border-radius: 12px;
 }
 
-/* Space inside each certificate card */
+/* Certificate image area */
 .certificate-image-wrap {
-  margin-bottom: 20px;
+  flex: 0 0 35%;
+  min-width: 0;
+  margin: 0;
+}
+
+.certificate-image-wrap a {
+  display: block;
 }
 
 .certificate-image-wrap img {
   display: block;
+  width: 100%;
   max-width: 100%;
   height: auto;
   border-radius: 8px;
 }
 
+/* Certificate text area */
+.certificate-details {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
 .certificate-details h3 {
-  margin-top: 12px;
+  margin-top: 0;
   margin-bottom: 12px;
   line-height: 1.4;
 }
@@ -1638,115 +1675,46 @@
   margin-bottom: 14px;
 }
 
-/* Divider and spacing before major sections */
-.skills-page + .skills-page {
-  margin-top: 55px;
-  padding-top: 45px;
-  border-top: 1px solid rgba(212, 175, 55, 0.6);
+/* Achievement cards have no image, so use the full width */
+#achievements .certificate-card {
+  display: block;
 }
 
-/* Responsive layout for phones */
+#achievements .certificate-details {
+  width: 100%;
+}
+
+/* Mobile layout */
 @media (max-width: 600px) {
   .skills-page {
     padding-top: 30px;
     padding-bottom: 30px;
   }
 
+  #ibm-certifications,
+  #achievements {
+    margin-top: 40px;
+    padding-top: 28px;
+  }
+
   .certificate-grid {
-    grid-template-columns: 1fr;
     gap: 22px;
     margin-top: 24px;
   }
 
   .certificate-card {
+    flex-direction: column;
+    gap: 18px;
     padding: 18px;
   }
 
-  .skills-page + .skills-page {
-    margin-top: 35px;
-    padding-top: 30px;
-  }
-}
-
-
-
-/* FORCE SPACE BETWEEN ALL CERTIFICATE CARDS */
-
-.certificate-grid {
-  display: grid !important;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 35px !important;
-  row-gap: 35px !important;
-  column-gap: 35px !important;
-  margin-top: 30px !important;
-  margin-bottom: 35px !important;
-}
-
-.certificate-card {
-  margin: 0 !important;
-  padding: 24px !important;
-  box-sizing: border-box;
-  border: 1px solid rgba(212, 175, 55, 0.4);
-  border-radius: 12px;
-}
-
-/* If cards are direct children of a container without a grid */
-.certificate-card + .certificate-card {
-  margin-top: 30px !important;
-}
-
-/* Space and divider before section headings */
-#ibm-certifications,
-#achievements {
-  margin-top: 60px !important;
-  padding-top: 45px !important;
-  border-top: 1px solid rgba(212, 175, 55, 0.65);
-}
-
-/* Mobile spacing */
-@media (max-width: 600px) {
-  .certificate-grid {
-    grid-template-columns: 1fr !important;
-    gap: 24px !important;
+  .certificate-image-wrap {
+    flex: 0 0 auto;
+    width: 100%;
   }
 
-  .certificate-card + .certificate-card {
-    margin-top: 0 !important;
+  #achievements .certificate-card {
+    display: block;
   }
 }
-
-
-/* SPACE AND DIVIDERS BEFORE CERTIFICATION AND ACHIEVEMENT SECTIONS */
-
-#ibm-certifications,
-#achievements {
-  display: flow-root;
-  margin-top: 70px !important;
-  padding-top: 45px !important;
-  border-top: 1px solid rgba(212, 175, 55, 0.65) !important;
-}
-
-/* Add space below each section heading */
-#ibm-certifications h2,
-#achievements h2 {
-  margin-top: 0 !important;
-  margin-bottom: 22px !important;
-}
-
-/* Space between section introduction and certificate cards */
-#ibm-certifications .certificate-grid,
-#achievements .certificate-grid {
-  margin-top: 30px !important;
-}
-
-/* Responsive spacing */
-@media (max-width: 600px) {
-  #ibm-certifications,
-  #achievements {
-    margin-top: 45px !important;
-    padding-top: 30px !important;
-  }
-}
-
-
 
