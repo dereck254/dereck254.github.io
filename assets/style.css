@@ -1669,3 +1669,84 @@
 }
 
 
+
+/* FORCE SPACE BETWEEN ALL CERTIFICATE CARDS */
+
+.certificate-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 35px !important;
+  row-gap: 35px !important;
+  column-gap: 35px !important;
+  margin-top: 30px !important;
+  margin-bottom: 35px !important;
+}
+
+.certificate-card {
+  margin: 0 !important;
+  padding: 24px !important;
+  box-sizing: border-box;
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  border-radius: 12px;
+}
+
+/* If cards are direct children of a container without a grid */
+.certificate-card + .certificate-card {
+  margin-top: 30px !important;
+}
+
+/* Space and divider before section headings */
+#ibm-certifications,
+#achievements {
+  margin-top: 60px !important;
+  padding-top: 45px !important;
+  border-top: 1px solid rgba(212, 175, 55, 0.65);
+}
+
+/* Mobile spacing */
+@media (max-width: 600px) {
+  .certificate-grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+
+  .certificate-card + .certificate-card {
+    margin-top: 0 !important;
+  }
+}
+
+
+/* SPACE AND DIVIDERS BEFORE CERTIFICATION AND ACHIEVEMENT SECTIONS */
+
+#ibm-certifications,
+#achievements {
+  display: flow-root;
+  margin-top: 70px !important;
+  padding-top: 45px !important;
+  border-top: 1px solid rgba(212, 175, 55, 0.65) !important;
+}
+
+/* Add space below each section heading */
+#ibm-certifications h2,
+#achievements h2 {
+  margin-top: 0 !important;
+  margin-bottom: 22px !important;
+}
+
+/* Space between section introduction and certificate cards */
+#ibm-certifications .certificate-grid,
+#achievements .certificate-grid {
+  margin-top: 30px !important;
+}
+
+/* Responsive spacing */
+@media (max-width: 600px) {
+  #ibm-certifications,
+  #achievements {
+    margin-top: 45px !important;
+    padding-top: 30px !important;
+  }
+}
+
+
+
