@@ -1585,4 +1585,87 @@
 }
 
 
+/* ========================================
+   GLOBAL CERTIFICATE AND SECTION SPACING
+   Applies to all certificates, including
+   certificates added in the future.
+======================================== */
+
+/* Add breathing room around certification sections */
+.skills-page {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+/* Consistent spacing between all certificate cards */
+.certificate-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+/* Separate every certificate card visually */
+.certificate-card {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  padding: 22px;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 12px;
+}
+
+/* Space inside each certificate card */
+.certificate-image-wrap {
+  margin-bottom: 20px;
+}
+
+.certificate-image-wrap img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.certificate-details h3 {
+  margin-top: 12px;
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.certificate-details p {
+  line-height: 1.75;
+  margin-bottom: 14px;
+}
+
+/* Divider and spacing before major sections */
+.skills-page + .skills-page {
+  margin-top: 55px;
+  padding-top: 45px;
+  border-top: 1px solid rgba(212, 175, 55, 0.6);
+}
+
+/* Responsive layout for phones */
+@media (max-width: 600px) {
+  .skills-page {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .certificate-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+    margin-top: 24px;
+  }
+
+  .certificate-card {
+    padding: 18px;
+  }
+
+  .skills-page + .skills-page {
+    margin-top: 35px;
+    padding-top: 30px;
+  }
+}
+
 
